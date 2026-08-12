@@ -40,16 +40,18 @@ ME137-237A-Energy-Management-Systems/
 ├── environment.yml             # Conda environment (Python packages, CoolProp, Jupyter, etc.)
 ├── requirements.txt            # Pip requirements alternative
 ├── lectures/                   # Lecture notebooks & companion code
-│   ├── week-01-data-centers/
-│   ├── week-02-psychrometrics/
+│   ├── 01/	   	        # Data Centers
+│   ├── 02/			# Psychrometrics
+│   ├── 03/			# Performance Metrics and Standards
 │   └── ...
 ├── laboratories/               # Lab starter code & setup guides
-│   ├── lab-01-ansys-fluent/
-│   ├── lab-02-cadence-reality-dc/
-│   ├── lab-03-modelica-flow/
+│   ├── 01/			# ANSYS Fluent
+│   ├── 02/			# Cadence Reality DC
+│   ├── 03/			# Modelica
 │   └── ...
 └── projects/                   # Project starter files & specs
-    ├── project-1/
-    ├── project-2/
-    └── project-3/  
+    ├── 01/			# Conduction/convection. Basic CFD, boundary layer, internal convection. ANSYS Fluent.
+    ├── 02/			# Air-handlers within the data center. Airflow CFD within the room. Apply airflow handling strategies. Cadence Reality DC Design Pro.
+    ├── 03/  			# Facility-level thermal analysis. Flow network modeling. Cadence Reality DC Design Pro.
+    └── ...  			
 ```
