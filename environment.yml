@@ -1,0 +1,24 @@
+name: me137-237a-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - jupyter
+  - jupyterlab
+  - ipykernel
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - sympy
+  - scikit-learn
+  - seaborn
+  - openpyxl
+  - pint
+  - pip
+  - pip:
+    - CoolProp
+    - pyCalor
+    - pyfluids
+    - nbstripout

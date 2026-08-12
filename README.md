@@ -27,8 +27,8 @@ To ensure all Python notebooks run smoothly with standard thermodynamic properti
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/ME137-237A-Energy-Management-Systems.git](https://github.com/YOUR_USERNAME/ME137-237A-Energy-Management-Systems.git)
-cd ME137-237A-Energy-Management-Systems
+git clone [git clone https://YOUR_TOKEN@github.com/mtsn-lab/me137-237a.git](git clone https://YOUR_TOKEN@github.com/mtsn-lab/me137-237a.git)
+```
 
 ---
 
