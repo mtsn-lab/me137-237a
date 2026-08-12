@@ -1,0 +1,57 @@
+# ==========================================
+# Byte-compiled / Python files
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# ==========================================
+# Jupyter Notebook Checkpoints & Outputs
+# ==========================================
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.nbconvert.ipynb
+
+# ==========================================
+# Simulation Software Temporary Files (ANSYS / Modelica / Cadence)
+# ==========================================
+# ANSYS Fluent log and journal files
+*.log
+*.jou
+*.trn
+*.cas.h5_files/
+*.dat.h5_files/
+
+# Modelica compilation outputs
+*.mat
+*.mmo
+*.c
+*.o
+*.libs
+*.buildlog.txt
+
+# Cadence / General CAD / Mesh output logs
+*.dmp
+*.tmp
+*.bak
+
+# ==========================================
+# OS & IDE Configuration Files
+# ==========================================
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+.vscode/
+.idea/
+
+# ==========================================
+# Environment & Secret Files
+# ==========================================
+.env
