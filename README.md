@@ -29,3 +29,27 @@ To ensure all Python notebooks run smoothly with standard thermodynamic properti
 ```bash
 git clone [https://github.com/YOUR_USERNAME/ME137-237A-Energy-Management-Systems.git](https://github.com/YOUR_USERNAME/ME137-237A-Energy-Management-Systems.git)
 cd ME137-237A-Energy-Management-Systems
+
+---
+
+## Repository Organization
+
+```
+ME137-237A-Energy-Management-Systems/
+├── README.md                   # Overview, prerequisite python env setup, syllabus link
+├── environment.yml             # Conda environment (Python packages, CoolProp, Jupyter, etc.)
+├── requirements.txt            # Pip requirements alternative
+├── lectures/                   # Lecture notebooks & companion code
+│   ├── week-01-data-centers/
+│   ├── week-02-psychrometrics/
+│   └── ...
+├── laboratories/               # Lab starter code & setup guides
+│   ├── lab-01-ansys-fluent/
+│   ├── lab-02-cadence-reality-dc/
+│   ├── lab-03-modelica-flow/
+│   └── ...
+└── projects/                   # Project starter files & specs
+    ├── project-1/
+    ├── project-2/
+    └── project-3/  
+```
