@@ -1,0 +1,193 @@
+%% Requires compilation with XeLaTeX or LuaLaTeX
+\documentclass[aspectratio=169,10pt,xcolor={table,dvipsnames},t]{beamer}
+\usetheme{UCBerkeley}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+\usepackage{xcolor}
+
+\title[lecture 02]{Next Generation Data Centers and Energy Management Systems}
+\subtitle{Lecture 2A: Psychrometrics and Heat Transfer}
+\author{Prof. Thomas M. Schutzius}
+\institute{Department of Mechanical Engineering}
+\date{Fall 2026}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Uncomment these lines for an automatically generated outline.
+%\begin{frame}{Outline}
+%  \tableofcontents
+%\end{frame}
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+	\begin{frame}
+		\frametitle{Learning Plan}
+%		% Commands to include a figure:
+		\begin{itemize}
+			\item Introduction to Data Center Systems and Thermodynamics 
+			\item \textbf{Psychrometrics and Heat Transfer}
+			\item Performance Metrics and Standards 
+			\item Applied Computational Fluid Dynamics (CFD)
+			\item Liquid Cooling \& Advanced Heat Transfer 
+			\item Chip Cooling: Heat Conduction and Thermal Interface Materials 
+			\item Power Delivery and Infrastructure (Energy sources: Geothermal, Solar, Nuclear, etc.)
+			\item Overview of Simulation Field; the Concept of a Digital Twin 
+			\item Machine Learning and Optimization Tools 
+			\item Modeling and Simulation of an Energy Management System 
+			\item Control Systems and Optimization 
+			\item Spacecraft Thermal Control
+			\item Final Project Work, Peer Feedback, and Mentor Check-in 
+			\item Symposium 
+		\end{itemize}		
+	\end{frame}
+}
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+	\begin{frame}
+		\frametitle{Learning Objectives}
+%		% Commands to include a figure:
+		\begin{itemize}
+%			\item Define different data center architectures
+			\item Analyze a data center rack, cooling tower, and economizer using thermodynamic and psychrometric principles.
+		\end{itemize}		
+	\end{frame}
+}
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+	\begin{frame}
+		\frametitle{Typical layout of a data center facility}
+		% Commands to include a figure:
+		\begin{figure}
+			\includegraphics[width=0.65\textwidth]{figures/joshi2021introduction-figure-01-01.pdf}
+%			\vspace{-0.5cm}
+		 \caption{\label{fig:data-center-layout}Y. Joshi and P. Kumar. Introduction to Data Center Energy Flow and Thermal Management, 2012.}
+		\end{figure}
+	\end{frame}
+}
+
+
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+	\begin{frame}
+		\frametitle{Hot-aisle/cold-aisle layout}
+		% Commands to include a figure:
+		\begin{figure}
+			\includegraphics[width=0.55\textwidth]{figures/joshi2021introduction-figure-01-15.png}
+%			\vspace{-0.5cm}
+		 \caption{\label{fig:hot-aisle}Y. Joshi and P. Kumar. Introduction to Data Center Energy Flow and Thermal Management, 2012.}
+		\end{figure}
+	\end{frame}
+}
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+	\begin{frame}
+		\frametitle{Thermodynamics of information}
+			\begin{itemize}
+				\item Almost all electrical energy consumed by a server is converted to heat: Joule heating.
+				\item The goal is to do bit-shifting, which is low entropy; however, the byproduct is massive entropy generation in the form of low-grade heat.
+		\end{itemize}
+	\end{frame}
+}
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+	\begin{frame}
+		\frametitle{Cooling infrastructure: Psychrometric principles}
+		% Commands to include a figure:
+		\begin{figure}
+			\includegraphics[width=0.8\textwidth]{figures/geng2021data-figure-14.pdf}
+%			\vspace{-0.5cm}
+		 \caption{\label{fig:cooling-infrastructure}H. Geng. Data Center Handbook. 2nd Edition, Wiley, 2021. Chapter 14. Example: \href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/psychrometricPrinciples.ipynb}{psychrometricPrinciples.ipynb}}
+		\end{figure}
+	\end{frame}
+}
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+	\begin{frame}
+		\frametitle{Cooling infrastructure: Cooling tower}
+		% Commands to include a figure:
+		\begin{figure}
+			\includegraphics[width=0.8\textwidth]{figures/geng2021data-figure-14.pdf}
+%			\vspace{-0.5cm}
+		 \caption{\label{fig:cooling-infrastructure}H. Geng. Data Center Handbook. 2nd Edition, Wiley, 2021. Chapter 14. Example: \href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/psychrometricPrinciples.ipynb}{coolingTower.ipynb}}
+		\end{figure}
+	\end{frame}
+}
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+	\begin{frame}
+		\frametitle{Learning Objectives}
+%		% Commands to include a figure:
+		\begin{itemize}
+%			\item Define different data center architectures
+			\item  \textcolor{ForestGreen}{Apply first and second law analysis to a data center rack}
+			\item  \textcolor{ForestGreen}{Analyze a data center cooling tower using psychrometric principles}
+		\end{itemize}		
+	\end{frame}
+}
+
+%{
+%\setbeamertemplate{background}{} % Hides background for this frame
+%\setbeamertemplate{footline}{}   % Reclaims the bottom space
+%\smallframetitle
+%\begin{frame}
+%\frametitle{Teaching team}
+%
+%\begin{columns}[T]
+%
+%\begin{column}{0.48\textwidth}
+%\small
+%Ben Brown
+%
+%		\begin{figure}
+%			\includegraphics[width=0.5\textwidth]{figures/ben-brown.pdf}
+%			\vspace{-0.5cm}
+%%		\caption{\label{fig:ben-brown}\href{https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf}{eta-publications.lbl.gov}}
+%		\end{figure}
+%
+%
+%\end{column}
+%
+%\begin{column}{0.48\textwidth}
+%Amelia Stacey
+%
+%		\begin{figure}
+%			\includegraphics[width=0.5\textwidth]{figures/oski.jpeg}
+%			\vspace{-0.5cm}
+%%		\caption{\label{fig:ben-brown}\href{https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report.pdf}{eta-publications.lbl.gov}}
+%		\end{figure}
+%\end{column}
+%
+%\end{columns}
+%\end{frame}
+%}
+
+
+
+
+\end{document}
