@@ -30,6 +30,17 @@ To ensure all Python notebooks run smoothly with standard thermodynamic properti
 git clone [git clone https://YOUR_TOKEN@github.com/mtsn-lab/me137-237a.git](git clone https://YOUR_TOKEN@github.com/mtsn-lab/me137-237a.git)
 ```
 
+### 2. Create and Activate the Conda Environment
+```bash
+conda env create -f environment.yml
+conda activate me137-237a-env
+```
+
+### 3. Launch JupyterLab
+```bash
+jupyter lab
+```
+
 ---
 
 ## Repository Organization
