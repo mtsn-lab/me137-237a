@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Some \LaTeX {} Examples}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{Mathematics}{3}{0}{2}
+\beamer@subsectionintoc {2}{2}{Tables and Figures}{4}{0}{2}
