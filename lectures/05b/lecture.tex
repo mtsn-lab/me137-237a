@@ -58,10 +58,10 @@
 		\frametitle{Learning Objectives}
 %		% Commands to include a figure:
 		\begin{itemize}
-			\item Explain the physical limitations of air cooling in high-TDP (Thermal Design Power) environments.
-			\item Identify the key components used to transfer heat away from a chip (TIM, Spreaders, Heat Pipes).
+			\item Explain the physical limitations of air cooling in high-thermal design power environments.
+			\item Identify the key components used to transfer heat away from a chip (TIMs, spreaders, heat pipes).
 			\item Differentiate between various liquid cooling architectures (Cold Plates vs. Immersion).
-			\item Describe the role and function of a Cooling Distribution Unit (CDU) in a data center environment.
+			\item Describe the role and function of a cooling distribution unit (CDU) in a data center environment.
 		\end{itemize}		
 	\end{frame}
 
@@ -69,7 +69,7 @@
 
 	\begin{frame}{The Heat Challenge: Why Liquid?}
 		\begin{itemize}
-			\item \textbf{Power Density:} Increasing TDP (Thermal Design Power) leads to extreme heat fluxes at the chip level.
+			\item \textbf{Power Density:} Increasing TDP (thermal design power) leads to extreme heat fluxes at the chip level.
 			\item \textbf{Limitations of Air:}
 			\begin{itemize}
 				\item Low volumetric heat capacity.
@@ -83,6 +83,26 @@
 			\end{itemize}
 		\end{itemize}
 	\end{frame}
+
+
+
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+\begin{frame}
+	\frametitle{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/fanLaws.ipynb}{Fan Laws}}
+
+% This derivation comes from Ref.\cite{bejan2004convection}.
+		\begin{figure}
+			\includegraphics[width=0.4\textwidth]{../figures/rack_cooling_plots.pdf}
+%			\vspace{-0.5cm}
+%		 \caption{Solution to the Pohlhausen equation. Read his biography \href{https://doi.org/10.1146/annurev.fl.16.010184.000245}{here}.}
+		\end{figure}
+\end{frame}
+}
+
+
 
 
 	\begin{frame}{Thermal Interface Materials (TIM)}
