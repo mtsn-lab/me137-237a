@@ -1,8 +1,19 @@
 \begin{thebibliography}{1}
 
+\bibitem{bulut2019review}
+Murat Bulut, Satish~G Kandlikar, and Nedim Sozbir.
+\newblock A review of vapor chambers.
+\newblock {\em Heat Transfer Engineering}, 40(19):1551--1573, 2019.
+
 \bibitem{joshi2012energy}
 Yogendra Joshi and Pramod Kumar, editors.
 \newblock {\em Energy Efficient Thermal Management of Data Centers}.
 \newblock Springer US, 2012.
+
+\bibitem{zimmermann2012aquasar}
+Severin Zimmermann, Ingmar Meijer, Manish~K Tiwari, Stephan Paredes, Bruno
+  Michel, and Dimos Poulikakos.
+\newblock Aquasar: A hot water cooled data center with direct energy reuse.
+\newblock {\em Energy}, 43(1):237--245, 2012.
 
 \end{thebibliography}

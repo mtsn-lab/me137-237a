@@ -65,7 +65,30 @@
 		\end{itemize}		
 	\end{frame}
 
+\begin{frame}
+	\frametitle{Seminar 2}
+		\begin{itemize}
+			\item Dr. David Geb, Synopsys (formerly Ansys)
+			\item Title: TBD
+			\item Date: Tuesday, 9/29/26
+			\item Time: 15:30 (Berkeley Time)
+			\item Location: GSPP 150
+		\end{itemize}
+\end{frame}
 
+{
+\setbeamertemplate{background}{} % Hides background for this frame
+\setbeamertemplate{footline}{}   % Reclaims the bottom space
+\smallframetitle
+\begin{frame}
+	\frametitle{Typical layout of a data center facility}
+		\begin{figure}
+			\includegraphics[width=0.65\textwidth]{../figures/joshi2021introduction-figure-01-01.pdf}
+%			\vspace{-0.5cm}
+		 \caption{(Figure 1.1 in Ref. \cite{joshi2012energy}).}
+		\end{figure}
+\end{frame}
+}
 
 	\begin{frame}{Liquid cooling}
 		\begin{itemize}
@@ -74,7 +97,7 @@
 			\begin{itemize}
 				\item Low volumetric heat capacity.
 				\item Requires large volumes of air and high fan speeds (power intensive).
-				\item Limited heat transfer coefficient ($\alpha$).
+				\item Limited heat transfer coefficient.
 			\end{itemize}
 			\item \textbf{The Liquid Advantage:}
 			\begin{itemize}
@@ -102,7 +125,13 @@
 \end{frame}
 }
 
-
+	\begin{frame}{Cooling technologies}
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{../figures/800x450-figure-1-cooling-technology.jpg}
+%			\vspace{-0.5cm}
+		 \caption{Understanding direct-to-chip cooling in HPC infrastructure: A deep dive into liquid cooling. Ref: \href{https://www.vertiv.com/en-us/insights/articles/educational-articles/understanding-direct-to-chip-cooling-in-hpc-infrastructure-a-deep-dive-into-liquid-cooling/}{Vertiv}.}
+		\end{figure}
+	\end{frame}
 
 
 	\begin{frame}{Thermal Interface Materials (TIM)}
@@ -117,28 +146,60 @@
 		\end{itemize}
 	\end{frame}
 
-	\begin{frame}{Spreading the Heat: Spreaders \& Heat Pipes}
+	\begin{frame}{Heat Spreaders}
 		\begin{itemize}
-			\item \textbf{Heat Spreaders:}
-			\begin{itemize}
-				\item High-conductivity metal (usually Copper) to distribute heat laterally.
+				\item High-conductivity metal (usually copper) to distribute heat laterally.
 				\item Reduces "spreading resistance."
-			\end{itemize}
-			\item \textbf{Heat Pipes \& Vapor Chambers:}
-			\begin{itemize}
-				\item Use \textbf{phase change} (evaporation/condensation) to transport heat.
-				\item \textbf{Heat Pipe:} 1D transport via capillary action.
-				\item \textbf{Vapor Chamber:} 2D spreading via phase change; extremely efficient for high-flux chips.
-			\end{itemize}
 		\end{itemize}
 	\end{frame}
+	
+	
+	\begin{frame}{Heat pipes and vapor chambers}
+			\begin{itemize}
+				\item Use phase change (evaporation/condensation) to transport heat.
+				\item Heat pipe: 1D transport via capillary action.
+				\item Vapor chamber: 2D spreading via phase change; extremely efficient for high-flux chips.
+			\end{itemize}
+			
+  \begin{columns}
+    \begin{column}{0.3\textwidth}
+		\begin{figure}
+			\includegraphics[width=1\textwidth]{../figures/bulut2019review-fig-1.pdf}
+%			\vspace{-0.5cm}
+		 \caption{Various vapor chambers \cite{bulut2019review}.}
+		\end{figure}
+    \end{column}
+    
+    \begin{column}{0.3\textwidth}
+		\begin{figure}
+			\includegraphics[width=1\textwidth]{../figures/bulut2019review-fig-2.pdf}
+%			\vspace{-0.5cm}
+		 \caption{Structure of a vapor chamber (Schematic: dimensions and sizes are not to scale) \cite{bulut2019review}.}
+		\end{figure}
+    \end{column}
+  \end{columns}
+	\end{frame}
+	
+	\begin{frame}{Heat pipes and vapor chambers}
+		\begin{figure}
+			\includegraphics[width=0.8\textwidth]{../figures/bulut2019review-tab-1.pdf}
+%			\vspace{-0.5cm}
+		 \caption{A comparison between vapor chambers and heat pipes \cite{bulut2019review}.}
+		\end{figure}
+
+
+	\end{frame}
+
+
+	
 
 	\begin{frame}{Liquid Cooling Architectures: Cold Plates}
 		\begin{itemize}
-			\item \textbf{Direct-to-Chip (Cold Plate) Cooling:}
+			\item \textbf{Direct-to-Chip (cold plate) Cooling:}
 			\begin{itemize}
 				\item A liquid-cooled metal block is mounted directly to the chip.
 				\item Liquid flows through internal channels to absorb heat.
+				\item \href{https://www.youtube.com/watch?v=98xtaYz0sy8}{Video} of the ``skiving'' process.
 			\end{itemize}
 			\item \textbf{Microchannel Technology:}
 			\begin{itemize}
@@ -162,26 +223,7 @@
 			\end{itemize}
 		\end{itemize}
 	\end{frame}
-
-	\begin{frame}{Case Study: Aquasar Technology}
-		\begin{itemize}
-			\item \textbf{Concept:} A hot water cooled supercomputer prototype designed for direct energy reuse.
-			\item \textbf{Performance Comparison:}
-			\begin{itemize}
-				\item \textbf{Liquid (Hot Water):} $\Delta T_{chip/coolant} \approx 15^\circ\text{C}$ (at $60^\circ\text{C}$ coolant).
-				\item \textbf{Air Cooling:} $\Delta T_{chip/air} \approx 35^\circ\text{C}$ (requiring pre-cooling to $23^\circ\text{C}$).
-			\end{itemize}
-			\item \textbf{Key Advantages:}
-			\begin{itemize}
-				\item Eliminates the need for energy-intensive chillers.
-				\item Enables \textbf{Heat Reuse}: $60^\circ\text{C}$ water can be used for building heating.
-				\item \textbf{Efficiency:} Achieved 80\% heat recovery efficiency and 34\% exergetic efficiency.
-			\end{itemize}
-			\item \textbf{Economic Insight:} Space heating provides the highest economic value for recovered heat.
-		\end{itemize}
-	\end{frame}
-
-
+	
 	\begin{frame}{System-Level: Cooling Distribution Unit (CDU)}
 		\begin{itemize}
 			\item \textbf{The Role:} Manages the heat exchange between the facility water and the IT cooling loop.
@@ -199,6 +241,49 @@
 			\end{itemize}
 		\end{itemize}
 	\end{frame}
+	
+	\begin{frame}{System-Level: Cooling Distribution Unit (CDU)}
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{../figures/vertiv-direct-to-chip-cold-plate.pdf}
+			\vspace{-0.5cm}
+		 \caption{\href{https://www.vertiv.com/en-us/solutions/vertiv-high-density-cooling-solutions/}{Vertiv}.}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}{Case Study: Aquasar Technology}
+		\begin{itemize}
+			\item \textbf{Concept:} A hot water cooled supercomputer prototype designed for direct energy reuse \cite{zimmermann2012aquasar}.
+			\item \textbf{Performance Comparison:}
+			\begin{itemize}
+				\item \textbf{Liquid (Hot Water):} $\Delta T_{chip/coolant} \approx 15^\circ\text{C}$ (at $60^\circ\text{C}$ coolant).
+				\item \textbf{Air Cooling:} $\Delta T_{chip/air} \approx 35^\circ\text{C}$ (requiring pre-cooling to $23^\circ\text{C}$).
+			\end{itemize}
+			\item \textbf{Key Advantages:}
+			\begin{itemize}
+				\item Eliminates the need for energy-intensive chillers.
+				\item Enables \textbf{Heat Reuse}: $60^\circ\text{C}$ water can be used for building heating.
+				\item \textbf{Efficiency:} Achieved 80\% heat recovery efficiency and 34\% exergetic efficiency.
+			\end{itemize}
+			\item \textbf{Economic Insight:} Space heating provides the highest economic value for recovered heat.
+		\end{itemize}
+	\end{frame}	
+	
+	\begin{frame}{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/fanLaws.ipynb}{Case Study: Aquasar Technology}}
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{../figures/zimmermann2012aquasar-fig-2.png}
+%			\vspace{-0.5cm}
+		 \caption{Aquasar: Schematics of the cooling loop \cite{zimmermann2012aquasar}. Let us analyze the second law efficiency of the green loop.}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/fanLaws.ipynb}{Case Study: Aquasar Technology}}
+		\begin{figure}
+			\includegraphics[width=0.5\textwidth]{../figures/eta-Tin.pdf}
+			\vspace{-0.5cm}
+		 \caption{Second-law efficiency of the secondary TCS loop  \cite{zimmermann2012aquasar}.}
+		\end{figure}
+	\end{frame}
+
 
 
 	\begin{frame}{Radiative Cooling in Space Systems}
@@ -221,68 +306,6 @@
 			\end{itemize}
 		\end{itemize}
 	\end{frame}
-
-
-
-{
-\setbeamertemplate{background}{} % Hides background for this frame
-\setbeamertemplate{footline}{}   % Reclaims the bottom space
-\smallframetitle
-\begin{frame}
-	\frametitle{Typical layout of a data center facility}
-		\begin{figure}
-			\includegraphics[width=0.65\textwidth]{../figures/joshi2021introduction-figure-01-01.pdf}
-%			\vspace{-0.5cm}
-		 \caption{(Figure 1.1 in Ref. \cite{joshi2012energy}).}
-		\end{figure}
-\end{frame}
-}
-
-\begin{frame}
-	\frametitle{Seminar 2}
-		\begin{itemize}
-			\item Dr. David Geb, Synopsys (formerly Ansys)
-			\item Title: TBD
-			\item Date: Tuesday, 9/29/26
-			\item Time: 15:30 (Berkeley Time)
-			\item Location: GSPP 150
-		\end{itemize}
-\end{frame}
-
-{
-\setbeamertemplate{background}{} % Hides background for this frame
-\setbeamertemplate{footline}{}   % Reclaims the bottom space
-\smallframetitle
-\begin{frame}
-	\frametitle{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/blasiusPohlhausenEquations.ipynb}{Microelectronics cooling: Solution to Blasius}}
-
-% This derivation comes from Ref.\cite{bejan2004convection}.
-		\begin{figure}
-			\includegraphics[width=0.4\textwidth]{../figures/blasius.pdf}
-%			\vspace{-0.5cm}
-		 \caption{Blasius profile. Solved numerically in 1908. Read his biography \href{https://doi.org/10.1007/s00348-002-0582-9}{here}.}
-		\end{figure}
-
-
-\end{frame}
-}
-
-{
-\setbeamertemplate{background}{} % Hides background for this frame
-\setbeamertemplate{footline}{}   % Reclaims the bottom space
-\smallframetitle
-\begin{frame}
-	\frametitle{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/blasiusPohlhausenEquations.ipynb}{Microelectronics cooling: Solution to Pohlhausen}}
-
-% This derivation comes from Ref.\cite{bejan2004convection}.
-		\begin{figure}
-			\includegraphics[width=0.4\textwidth]{../figures/pohlhausen.pdf}
-%			\vspace{-0.5cm}
-		 \caption{Solution to the Pohlhausen equation. Read his biography \href{https://doi.org/10.1146/annurev.fl.16.010184.000245}{here}.}
-		\end{figure}
-\end{frame}
-}
-
 
 {
 \setbeamertemplate{background}{} % Hides background for this frame
