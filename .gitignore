@@ -55,3 +55,4 @@ ehthumbs.db
 # Environment & Secret Files
 # ==========================================
 .env
+.clinerules
