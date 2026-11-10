@@ -16,9 +16,13 @@ dependencies:
   - seaborn
   - openpyxl
   - pint
+  - tensorflow=2.15.0      # Added for Keras-based CNNs and LSTMs
+  - gymnasium       # Added for Reinforcement Learning environments
   - pip
   - pip:
     - CoolProp
     - pyCalor
     - pyfluids
     - nbstripout
+    - stable-baselines3 # Added for out-of-the-box RL algorithms
+    - gekko             # Added for Model Predictive Control optimization
