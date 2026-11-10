@@ -90,12 +90,15 @@
 \end{frame}
 
     \begin{frame}
-        \frametitle{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/timeSeriesData.ipynb}{CNN Deep Learning Model for Time Series Forecasting Problems}}
+        \frametitle{CNN Deep Learning Model for Time Series Forecasting Problems \cite{brownlee2018deep}}
 
 	\begin{itemize}
 		\item Neural networks that were designed to efficiently handle image data. 
 		\item They can automatically extract features from raw input data and can be applied to time series forecasting problems
-		\item How to prepare time series data for CNNs and LSTMs? 
+		\item \href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/timeSeriesData.ipynb}{How to prepare time series data for CNNs and LSTMs?}
+		\item \href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/cnnUnivariate.ipynb}{How to implement a CNN model for univariate time series forecasting problems?}
+		\item \href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/cnnMultivariate.ipynb}{How to implement a CNN model for multivariate time series forecasting problems?
+}
 	\end{itemize}
 
 %            \begin{figure}
@@ -106,39 +109,41 @@
     \end{frame}
     
     \begin{frame}
-        \frametitle{}
+        \frametitle{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/lstmUnivariate.ipynb}{LSTM} \cite{brownlee2018deep}}
 
 	\begin{itemize}
-		\item 
-		\item 
+		\item The Long Short-Term Memory (LSTM) network is a type of recurrent neural network. 
+		\item Recurrent neural networks provide support for input sequence data. 
+		\item Instead of mapping inputs and outputs alone, they can learn a mapping function for the inputs over time to an output. 
+		\item They’ve been used for translation. 
+		\item They can automatically learn the temporal dependence of data. 
 	\end{itemize}
     \end{frame}
 
     \begin{frame}
-        \frametitle{}
+        \frametitle{CNN-LSTM \cite{brownlee2018deep}}
+Although CNNs can learn arbitrary mapping functions, the addition of support for input sequences in RNNs offers efficiency and greater performance for automatically learning temporal dependencies. 
 
+CNNs:
 	\begin{itemize}
-		\item 
-		\item 
+		\item They support efficient feature learning.
+		\item Localized feature extractor; identifies short-term patterns (e.g., spike in IT load or drop in outside temperature).
+	\end{itemize}
+	
+LSTMs: 
+	\begin{itemize}
+		\item They support efficient learning of temporal dependencies.
+		\item Learns long-term time dependencies on those extracted features (e.g., daily or seasonal cooling trends).
 	\end{itemize}
     \end{frame}
 
     \begin{frame}
-        \frametitle{}
-
-	\begin{itemize}
-		\item 
-		\item 
-	\end{itemize}
-    \end{frame}
-    
-        \begin{frame}
-        \frametitle{}
-
-	\begin{itemize}
-		\item 
-		\item 
-	\end{itemize}
+        \frametitle{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/buildingEnergyManagementSystem.ipynb}{CNN-LSTM}}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.5\textwidth]{../figures/buildingEnergyManagementSystem_raw-time-series-data}
+                 \caption{Raw time-series data.}
+            \end{figure}
     \end{frame}
 
 % ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
