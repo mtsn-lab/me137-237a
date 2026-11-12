@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{brownlee2018deep}
+Jason Brownlee.
+\newblock {\em Deep learning for time series forecasting: predict the future
+  with MLPs, CNNs and LSTMs in Python}.
+\newblock Machine Learning Mastery, 2018.
+
+\bibitem{joshi2012energy}
+Yogendra Joshi and Pramod Kumar, editors.
+\newblock {\em Energy Efficient Thermal Management of Data Centers}.
+\newblock Springer US, 2012.
+
+\end{thebibliography}
