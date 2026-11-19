@@ -79,58 +79,54 @@
 			\item Time: 15:30 (Berkeley Time)
 			\item Location: GSPP 150
 		\end{itemize}
-\end{frame}
-
-   
-%    \begin{frame}
- %       \frametitle{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/modelPredictiveControlCDU.ipynb}{Modeling and Predictive Control of a Rack CDU}}
-%		\begin{figure}
-%			\includegraphics[width=0.45\textwidth]{../figures/modelPredictiveControlCDU.pdf}
-%			\vspace{-0.5cm }
-%		 \caption{CDU thermal management during an idle to full-throttle process.}
-%		\end{figure}
- %   \end{frame}
+\end{frame}  
 
     \begin{frame}
         \frametitle{Limitation of thermostats}
 In a residential setting, a thermostat is a simple "bang-bang" controller (On/Off). In a Data Center, this is not a solution:
-Data centers have massive thermal inertia. If you wait for a wall-mounted thermostat to get warm before turning on a CRAC unit, the server inlets at the top of the rack have already exceeded safe operating temperatures.
-A data center's heat load changes instantly based on CPU/GPU utilization. We need anticipatory control, not just reactive switching.
+
+\begin{itemize}
+	\item Data centers have massive thermal inertia.
+	\item  If you wait for a wall-mounted thermostat to get warm before turning on a CRAC unit, the server inlets at the top of the rack have already exceeded safe operating temperatures.
+	\item A data center's heat load changes instantly based on CPU/GPU utilization. We need anticipatory control, not just reactive switching.
+\end{itemize}
     \end{frame}
 
 
     \begin{frame}
         \frametitle{Building Automation Systems (BAS)}
-These systems orchestrate complex sequences between chillers, CRAC units, and power meters to optimize PUE.
+These systems orchestrate complex sequences between chillers, CRAC units, and power meters to optimize PUE. It consists of:
 
-It consists of:
-Server/User Interface (WebCTRL, e.g., browser-based dashboard to monitor trends, alarms, etc.)
-Multi-protocol routers, e.g., BACnet, Modbus
-Native BACnet controllers, e.g., direct digital control physically wired to sensors, e.g., temperature, humidity, pressure)
+\begin{itemize}
+	\item Server/User Interface (WebCTRL, e.g., browser-based dashboard to monitor trends, alarms, etc.)
+	\item Multi-protocol routers, e.g., BACnet, {\em Modbus}
+	\item Native BACnet controllers, e.g., direct digital control physically wired to sensors, e.g., temperature, humidity, pressure)
+\end{itemize}
     \end{frame}
 
     \begin{frame}
         \frametitle{Communication protocols}
-BACnet is a communication protocol for building automation control (BAC). 
-Can communicate with generators, cooling units, power distribution units, etc.
-Modbus is an industrial computer networking protocol, which was originally designed for programmable logic controllers (PLCs).
+\begin{itemize}
+	\item BACnet is a communication protocol for building automation control (BAC). Can communicate with generators, cooling units, power distribution units, etc.
+	\item Modbus is an industrial computer networking protocol, which was originally designed for programmable logic controllers (PLCs).
+\end{itemize}
     \end{frame}
 
     \begin{frame}
-        \frametitle{Dynamic control logic}
-...
+        \frametitle{\href{https://datahub.berkeley.edu/user-redirect/git-pull?repo=https://github.com/mtsn-lab/me137-237a&subPath=examples/plcDataCenterCoolingDigitalTwinControlArchitecture.ipynb}{Data Center Cooling Digital Twin Control Architecture}}
+%		\begin{figure}
+%			\includegraphics[width=0.45\textwidth]{../figures/modelPredictiveControlCDU.pdf}
+%			\vspace{-0.5cm }
+%		 \caption{CDU thermal management during an idle to full-throttle process.}
+%		\end{figure}
     \end{frame}
-    
-    \begin{frame}
-        \frametitle{PLC: Function Block Diagrams}
-...
-    \end{frame}
-    
-        \begin{frame}
-        \frametitle{Conclusion}
-Moving from reactive PIDs to Predictive Control (AI-driven setpoints).
 
-    \end{frame}
+    
+%        \begin{frame}
+ %       \frametitle{Conclusion}
+%Moving from reactive PIDs to Predictive Control (AI-driven setpoints).
+
+%    \end{frame}
 
 % ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 % This is an example for how I link the Jupyter notebook example to the slide I am showing.

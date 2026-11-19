@@ -26,4 +26,6 @@ dependencies:
     - nbstripout
     - stable-baselines3 # Added for out-of-the-box RL algorithms
     - gekko             # Added for Model Predictive Control optimization
-    - pymodbus==3.6.9   # Added for Modbus TCP PLC communication in Lab 11
+    - pymodbus==3.6.9   # Added for Modbus TCP PLC communication
+    - bacpypes3         # Added for BACnet/IP stack
+    - BAC0              # Added for BACnet/IP stack
