@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "protocol": "modbus-tcp",
+  "modbusSlaveConfig": {
+    "enabled": true,
+    "networkInterface": "0.0.0.0",
+    "port": 5020,
+    "bufferMapping": {
+      "holdingRegisters": {
+        "qwCount": 1024,
+        "mwCount": 1024
+      },
+      "coils": {
+        "qxBits": 8
+      }
+    }
+  }
+}
